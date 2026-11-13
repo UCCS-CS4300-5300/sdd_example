@@ -12,16 +12,16 @@ This repository is an intentionally small, independent sandbox. It is **not** Dr
 
 ## Start here (in GitHub Codespaces)
 
-**Assume Codex is NOT installed and nobody is logged in.** Students do not need to install VS Code locally. One working Codex session per group is enough for the workshop.
+**Assume your chosen coding agent is NOT installed and nobody is logged in.** Students do not need to install VS Code locally. One working coding-agent session per group is enough for the workshop. **Codex and Claude Code are both welcome; the SDD reasoning and prompts are the same.**
 
-1. Open this repository in a new GitHub Codespace (Code → Codespaces → Create codespace on main), then open **Terminal → New Terminal**.
+1. **Fork this repository into your own GitHub account** (or make a personal copy). Open a Codespace from **your fork/copy**, not the shared instructor repository (Code → Codespaces → Create codespace on main), then open **Terminal → New Terminal**.
 2. Check that Node.js and npm are available:
    ```bash
    node --version
    npm --version
    ```
    If either command is missing, stop and ask for help rather than changing the team's application.
-3. **Install Codex CLI** in the Codespace:
+3. **If using Codex, install Codex CLI** in the Codespace:
    ```bash
    npm install -g @openai/codex
    codex --version
@@ -40,9 +40,26 @@ This repository is an intentionally small, independent sandbox. It is **not** Dr
    ```bash
    codex
    ```
-7. Ask: **"Summarize AGENTS.md in three bullets. Do not modify files."** Then read `specs/001-appointment-cancellation/spec.md` and work through `prompts/01-specify.md` to `prompts/05-review.md` in order.
+7. Ask: **"Summarize AGENTS.md in three bullets. Do not modify files."** Then read `specs/001-appointment-cancellation/spec.md`. For the in-class activity, use the prompts in the Canvas worksheet; the repository's `prompts/01-specify.md` through `prompts/05-review.md` are available for deeper optional practice.
 
 **Security and troubleshooting:** Never share login codes, access tokens, or secrets in chat or screenshots. A successful `codex --version` means installed, **not** authenticated; check `codex login status` separately. If npm installation or login fails, join your group in reviewing the specification manually; you can still participate in the engineering decisions.
+
+
+## Prefer Claude? Use Claude Code in the same Codespace
+
+If you already use **Claude Code**, you may use it instead of Codex. Start from **your own fork/copy** of this repository and open its Codespace. In the Codespaces terminal, install Claude Code using Anthropic's native installer:
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+claude --version
+claude
+```
+
+Follow Claude Code's sign-in instructions using **your own authorized account**. If needed, use `/login` inside Claude Code. Claude Code access may require an eligible paid Claude plan or billed API access; **do not purchase anything for this workshop**. If you already have access, use it. If you do not, work with a teammate or complete the worksheet's reasoning manually.
+
+**Use the same SDD prompts** from the Canvas worksheet. Claude Code can read `AGENTS.md` when a prompt explicitly asks it to; you do not need to create a `CLAUDE.md` file for this exercise. The prompts about reviewing the specification, comparing options, and documenting a human decision work with either agent. A regular Claude chat session can also help with the reasoning if you paste the relevant specification text, though it cannot directly inspect the Codespace repository.
+
+Never share credentials or authentication codes. Do not paste API keys into files or commit them to GitHub.
 
 ## What is already implemented?
 
