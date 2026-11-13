@@ -27,12 +27,12 @@ This repository is an intentionally small, independent sandbox. It is **not** Dr
    codex --version
    ```
    Do not use `sudo` unless the instructor helps diagnose a permissions problem.
-4. **Log in** with your own authorized ChatGPT account (not the instructor's):
+4. **Option A — Log in with a personal ChatGPT account** (not the instructor's):
    ```bash
    codex login --device-auth
    ```
-   Follow the URL and one-time code displayed in the terminal. If device login is unavailable or your account is not eligible, tell the instructor. **Do not buy a subscription or paste API keys into this repository.** The Sprint 3 course gateway is not a Codex login.
-5. Verify authentication:
+   Follow the URL and one-time code displayed in the terminal. If device login is unavailable or your account is not eligible, see Option B below or tell the instructor. **Do not buy a subscription or paste API keys into this repository.** The Sprint 3 course gateway is not a Codex login.
+5. Verify authentication for the ChatGPT-account route:
    ```bash
    codex login status
    ```
@@ -41,6 +41,17 @@ This repository is an intentionally small, independent sandbox. It is **not** Dr
    codex
    ```
 7. Ask: **"Summarize AGENTS.md in three bullets. Do not modify files."** Then read `specs/001-appointment-cancellation/spec.md`. For the in-class activity, use the prompts in the Canvas worksheet; the repository's `prompts/01-specify.md` through `prompts/05-review.md` are available for deeper optional practice.
+
+## Option B — Using UCCS-provided ChatGPT access or an OpenAI API key
+
+If your ChatGPT access is provided through **UCCS**, the institutional sign-in may not work with Codex's personal-account device-login flow. When you start Codex with `codex`, it can present **multiple sign-in methods**. Choose the method supported by your account:
+
+- **Sign in with ChatGPT** if your account supports it. Follow the browser/device authorization flow.
+- **Use an OpenAI API key** only if you already have an authorized OpenAI Platform account/project and permission to use its API budget. Open [OpenAI Platform — API keys](https://platform.openai.com/api-keys) and create a **secret API key** for the appropriate project. **This is not a public key.** Copy it once and keep it private. An institutional ChatGPT license does **not** automatically mean you have API access or API credits.
+
+If you are authorized to use an API key, provide it through Codex's supported **API-key sign-in option** when prompted. Do **not** paste the key into Codex chat, `AGENTS.md`, `spec.md`, source files, a committed `.env` file, screenshots, or a shared terminal. Do not share the key with teammates. API usage may incur charges to the associated project; check with the instructor or UCCS administrator before using it.
+
+If you have UCCS ChatGPT access but **no authorized API key**, do not create a billable project just for this workshop. Work with a teammate who has working access, use another approved assistant (such as Claude), or complete the worksheet manually. The engineering reasoning—not access to a particular paid tool—is assessed.
 
 **Security and troubleshooting:** Never share login codes, access tokens, or secrets in chat or screenshots. A successful `codex --version` means installed, **not** authenticated; check `codex login status` separately. If npm installation or login fails, join your group in reviewing the specification manually; you can still participate in the engineering decisions.
 
