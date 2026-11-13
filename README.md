@@ -10,13 +10,39 @@ This repository is an intentionally small, independent sandbox. It is **not** To
 
 **Do not start by asking Codex to build the entire app.** This request leaves open essential decisions about users, permissions, time conflicts, time zones, cancellations, and persistence. Your job is to make the important decisions before implementation.
 
-## Start here (in Codespaces)
+## Start here (in GitHub Codespaces)
 
-1. Open this repository in a new Codespace, or clone it into a separate working directory. This is the practice project, not a student team's repository.
-2. From the repository root, check `codex --version` and `codex login status`. If you need authentication, use your **own authorized account**. The Sprint 3 course gateway is **not** a Codex login.
-3. Read `AGENTS.md`, `specs/001-appointment-cancellation/spec.md`, and `prompts/01-specify.md`.
-4. Start Codex from this repository root and ask: `Summarize AGENTS.md in 3 bullets. Do not modify files.`
-5. Work through the five prompts in order, with human review at every transition.
+**Assume Codex is NOT installed and nobody is logged in.** Students do not need to install VS Code locally. One working Codex session per group is enough for the workshop.
+
+1. Open this repository in a new GitHub Codespace (Code → Codespaces → Create codespace on main), then open **Terminal → New Terminal**.
+2. Check that Node.js and npm are available:
+   ```bash
+   node --version
+   npm --version
+   ```
+   If either command is missing, stop and ask for help rather than changing the team's application.
+3. **Install Codex CLI** in the Codespace:
+   ```bash
+   npm install -g @openai/codex
+   codex --version
+   ```
+   Do not use `sudo` unless the instructor helps diagnose a permissions problem.
+4. **Log in** with your own authorized ChatGPT account (not the instructor's):
+   ```bash
+   codex login --device-auth
+   ```
+   Follow the URL and one-time code displayed in the terminal. If device login is unavailable or your account is not eligible, tell the instructor. **Do not buy a subscription or paste API keys into this repository.** The Sprint 3 course gateway is not a Codex login.
+5. Verify authentication:
+   ```bash
+   codex login status
+   ```
+6. Make sure your terminal is in the `sdd_example` repository root (the directory containing `AGENTS.md`). Then start:
+   ```bash
+   codex
+   ```
+7. Ask: **"Summarize AGENTS.md in three bullets. Do not modify files."** Then read `specs/001-appointment-cancellation/spec.md` and work through `prompts/01-specify.md` to `prompts/05-review.md` in order.
+
+**Security and troubleshooting:** Never share login codes, access tokens, or secrets in chat or screenshots. A successful `codex --version` means installed, **not** authenticated; check `codex login status` separately. If npm installation or login fails, join your group in reviewing the specification manually; you can still participate in the engineering decisions.
 
 ## What is already implemented?
 
