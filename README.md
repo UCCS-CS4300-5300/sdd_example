@@ -42,16 +42,15 @@ This repository is an intentionally small, independent sandbox. It is **not** Dr
    ```
 7. Ask: **"Summarize AGENTS.md in three bullets. Do not modify files."** Then read `specs/001-appointment-cancellation/spec.md`. For the in-class activity, use the prompts in the Canvas worksheet; the repository's `prompts/01-specify.md` through `prompts/05-review.md` are available for deeper optional practice.
 
-## Option B — Using UCCS-provided ChatGPT access or an OpenAI API key
+## UCCS ChatGPT Edu accounts and Codex access
 
-If your ChatGPT access is provided through **UCCS**, the institutional sign-in may not work with Codex's personal-account device-login flow. When you start Codex with `codex`, it can present **multiple sign-in methods**. Choose the method supported by your account:
+**UCCS ChatGPT Edu access does not automatically include OpenAI API credits or permission to run Codex.** UCCS lists Codex as a credit-based advanced feature; institutional administrators control access and limits. See [ChatGPT at UCCS](https://ai.uccs.edu/chatgpt) and the [UCCS ChatGPT FAQs](https://ai.uccs.edu/chatgpt/faqs).
 
-- **Sign in with ChatGPT** if your account supports it. Follow the browser/device authorization flow.
-- **Use an OpenAI API key** only if you already have an authorized OpenAI Platform account/project and permission to use its API budget. Open [OpenAI Platform — API keys](https://platform.openai.com/api-keys) and create a **secret API key** for the appropriate project. **This is not a public key.** Copy it once and keep it private. An institutional ChatGPT license does **not** automatically mean you have API access or API credits.
+If you use ChatGPT through UCCS, you can try the supported ChatGPT sign-in option in Codex **only if your UCCS account is enabled for Codex**. If login succeeds but requests are blocked by usage or credit limits, stop and tell the instructor. **Do not create an OpenAI Platform API key or add personal billing to fix this for class.** A newly created API key does not come with free API usage, and a ChatGPT Edu license does not fund a personal API project.
 
-If you are authorized to use an API key, provide it through Codex's supported **API-key sign-in option** when prompted. Do **not** paste the key into Codex chat, `AGENTS.md`, `spec.md`, source files, a committed `.env` file, screenshots, or a shared terminal. Do not share the key with teammates. API usage may incur charges to the associated project; check with the instructor or UCCS administrator before using it.
+For this workshop, use an already-authorized coding agent if you have one, collaborate with a teammate who has access, or use the UCCS ChatGPT Edu chat interface to review the specification by pasting the relevant text. Manual reasoning is also acceptable. No purchase, API key, or paid coding-agent access is required to earn credit.
 
-If you have UCCS ChatGPT access but **no authorized API key**, do not create a billable project just for this workshop. Work with a teammate who has working access, use another approved assistant (such as Claude), or complete the worksheet manually. The engineering reasoning—not access to a particular paid tool—is assessed.
+For UCCS feature or credit questions, contact [chatgpt@uccs.edu](mailto:chatgpt@uccs.edu) or the [UCCS ChatGPT service desk](mailto:chatgpthelp@uccs.edu).
 
 **Security and troubleshooting:** Never share login codes, access tokens, or secrets in chat or screenshots. A successful `codex --version` means installed, **not** authenticated; check `codex login status` separately. If npm installation or login fails, join your group in reviewing the specification manually; you can still participate in the engineering decisions.
 
