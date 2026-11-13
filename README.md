@@ -2,7 +2,7 @@
 
 **CS4300/5300 · instructor demonstration and optional student practice**
 
-This repository is an intentionally small, independent sandbox. It is **not** Tom Hastings's Homework 2 and **not** any team's Sprint 4 application. The task is to practice the **Specify → Plan → Tasks → Implement (test first) → Review** workflow.
+This repository is an intentionally small, independent sandbox. It is **not** Dr. Hastings's Homework 2 and **not** any team's Sprint 4 application. The task is to practice the **Specify → Plan → Tasks → Implement (test first) → Review** workflow.
 
 ## The deliberately vague request
 
@@ -64,4 +64,4 @@ For a first implementation, a small Python standard-library domain module is eno
 
 A failed experiment or a useful newly discovered ambiguity is legitimate progress. Don't change student code, share credentials, or use this repository for graded Sprint 4 work.
 
-**Teaching context:** This exercise follows the process from Tom Hastings's [Codex SDD Template](https://github.com/tghastings/cs4300andcs5300/tree/main/Codex%20SDD%20Template), adapted to a separate classroom example.
+**Teaching context:** This exercise follows the process from Dr. Hastings's [Codex SDD Template](https://github.com/tghastings/cs4300andcs5300/tree/main/Codex%20SDD%20Template), adapted to a separate classroom example.
